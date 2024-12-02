@@ -17,28 +17,28 @@ class Testimonial extends DataObject
 
     private static $plural_name = "Testimonials";
 
-    private static $db = array(
+    private static $db = [
         'Content' => 'Text',
         'Name' => 'Varchar',
         'Business' => 'Varchar',
         'Date' => 'Date',
         'Hidden' => 'Boolean'
-    );
+    ];
 
-    private static $has_one = array(
+    private static $has_one = [
         'Image' => Image::class,
         'Member' => Member::class
-    );
+    ];
 
     private static $owns = [
         'Image'
     ];
 
-    private static $summary_fields = array(
+    private static $summary_fields = [
         'Business',
         'Name',
         'Date'
-    );
+    ];
 
     private static $searchable_fields = [
         'Name',

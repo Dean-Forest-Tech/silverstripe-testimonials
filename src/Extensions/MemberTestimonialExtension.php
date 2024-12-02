@@ -7,8 +7,8 @@ use SilverStripe\ORM\DataExtension;
 class MemberTestimonialExtension extends DataExtension 
 {
     
-    private static $belongs_to = array(
+    private static $belongs_to = [
         'Testimonial' => 'Testimonial'
-    );
+    ];
 
 }
