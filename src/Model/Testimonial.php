@@ -7,6 +7,7 @@ use SilverStripe\ORM\DataObject;
 use SilverStripe\Security\Member;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Security\Permission;
+use SilverStripe\Security\Security;
 
 class Testimonial extends DataObject 
 {
@@ -50,11 +51,15 @@ class Testimonial extends DataObject
     public function getCMSFields() 
     {
         $this->beforeUpdateCMSFields(function ($fields) {
+            $members = Member::get()
+                ->map("ID","Name")
+                ->toArray();
+
             $fields->addFieldToTab("Root.Main",
                 DropdownField::create(
                     "MemberID",
                     "Member",
-                    Member::get()->map("ID","Name")->toArray()
+                    $members
                 )->setEmptystring(_t("Testimonials.NoName", "No Name Left"))
             );
         });
@@ -123,20 +128,26 @@ class Testimonial extends DataObject
 
     public function canCreate($member = null, $context = array()) 
     {
-        if(!$member) $member = Member::currentUser();
-        
+        if (empty($member)) {
+            $member = Security::getCurrentUser();
+        }
+    
         return (boolean)$member;
     }
 
     public function canEdit($member = null) 
     {
-        if(!$member) $member = Member::currentUser();
+        if (empty($member)) {
+            $member = Security::getCurrentUser();
+        }
         
         return Permission::check("CMS_ACCESS_CMSMain") || ($member && $this->MemberID == $member->ID);
     }
 
     public function canDelete($member = null) {
-        if(!$member) $member = Member::currentUser();
+        if (empty($member)) {
+            $member = Security::getCurrentUser();
+        }
         
         return Permission::check("CMS_ACCESS_CMSMain") || ($member && $this->MemberID == $member->ID);
     }
