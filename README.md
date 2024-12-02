@@ -10,3 +10,13 @@ that appears to have been abandond.
  * Creation of testimonlials that can contain: Content, Name, Business, Date, Show and Image
  * Testimonials holder page that lists Testimonials.
  * Testimonlials widget that can show a random testimonial in the widget area.
+
+## Install
+
+Install this module via composer:
+
+    composer require dft/silverstripe-testimonials
+
+## Requirements
+
+This module needs either SilverStripe 4 or 5
