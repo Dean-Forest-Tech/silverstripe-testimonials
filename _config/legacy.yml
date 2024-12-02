@@ -3,6 +3,9 @@ Name: testimoniallegacy
 ---
 SilverStripe\ORM\DatabaseAdmin:
   classname_value_remapping:
-    Testimonial: ilateral\SilverStripe\Testimonials\Model\Testimonial
-    TestimonialsHolderPage: ilateral\SilverStripe\Testimonials\Model\TestimonialsHolderPage
-    TestimonialWidget: ilateral\SilverStripe\Testimonials\Model\TestimonialWidget
+    Testimonial: DFT\SilverStripe\Testimonials\Model\Testimonial
+    TestimonialsHolderPage: DFT\SilverStripe\Testimonials\Model\TestimonialsHolderPage
+    TestimonialWidget: DFT\SilverStripe\Testimonials\Model\TestimonialWidget
+    ilateral\SilverStripe\Testimonials\Model\Testimonial: DFT\SilverStripe\Testimonials\Model\Testimonial
+    ilateral\SilverStripe\Testimonials\Model\TestimonialsHolderPage: DFT\SilverStripe\Testimonials\Model\TestimonialsHolderPage
+    ilateral\SilverStripe\Testimonials\Model\TestimonialWidget: DFT\SilverStripe\Testimonials\Model\TestimonialWidget
