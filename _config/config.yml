@@ -1,0 +1,7 @@
+---
+Name: testimonialconfig
+---
+
+SilverStripe\Security\Member:
+  extensions:
+    - DFT\SilverStripe\Testimonials\Extensions\MemberTestimonialExtension
