@@ -1,11 +1,11 @@
 {
-    "name": "i-lateral/silverstripe-testimonials",
+    "name": "dft/silverstripe-testimonials",
     "description": "Add testimonials to a SilverStripe site, either via a page or a widget",
     "type": "silverstripe-vendormodule",
-	"homepage": "http://github.com/i-lateral/silverstripe-testimonials",
+	"homepage": "http://github.com/Dean-Forest-Tech/silverstripe-testimonials",
 	"keywords": ["silverstripe", "testimonlials", "widget", "page"],
     "require": {
-        "silverstripe/cms": "~4 || ~5"
+        "silverstripe/cms": "^4 || ^5"
     },
     "license": "BSD-3-Clause",
     "authors": [
@@ -14,17 +14,17 @@
             "email": "jeremy@burnbright.net"
         },
         {
-            "name": "Morven Lewis-Everley",
-            "email": "morven@ilateral.co.uk"
+            "name": "Dean Forest Tech",
+            "homepage": "https://dean-forest-tech.uk"
         }
     ],
     "support": {
-        "issues": "http://github.com/i-lateral/silverstripe-testimonials/issues"
+        "issues": "http://github.com/Dean-Forest-Tech/silverstripe-testimonials/issues"
     },
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "ilateral\\SilverStripe\\Testimonials\\": "src/"
+            "DFT\\SilverStripe\\Testimonials\\": "src/"
         }
     }
 }

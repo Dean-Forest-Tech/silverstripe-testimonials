@@ -30,3 +30,8 @@ This document logs changes by release for the SilverStripe gallery module.
 ## 4.0.9
 
 * Fix composer issues
+
+## 5.0.0
+
+* Switch to DFT namespace
+* Add SS5 support
