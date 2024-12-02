@@ -1,11 +1,10 @@
 <?php
 
-namespace ilateral\SilverStripe\Testimonials\Model;
+namespace DFT\SilverStripe\Testimonials\Model;
 
-use ilateral\SilverStripe\Testimonials\Control\TestimonialsHolderPageController;
+use DFT\SilverStripe\Testimonials\Control\TestimonialsHolderPageController;
 use Page;
 use SilverStripe\Forms\GridField\GridField;
-use ilateral\SilverStripe\Testimonials\Model\Testimonial;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use SilverStripe\ORM\DataList;
 

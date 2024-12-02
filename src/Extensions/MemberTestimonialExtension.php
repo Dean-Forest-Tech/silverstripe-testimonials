@@ -1,12 +1,9 @@
 <?php
 
-namespace ilateral\SilverStripe\Testimonials\Extensions;
+namespace DFT\SilverStripe\Testimonials\Extensions;
 
 use SilverStripe\ORM\DataExtension;
 
-/**
-* MemberTestimonialExtension
-*/
 class MemberTestimonialExtension extends DataExtension 
 {
     

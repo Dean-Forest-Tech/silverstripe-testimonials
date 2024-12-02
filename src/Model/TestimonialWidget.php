@@ -1,11 +1,9 @@
 <?php
 
-namespace ilateral\SilverStripe\Testimonials\Model;
+namespace DFT\SilverStripe\Testimonials\Model;
 
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Widgets\Model\Widget;
-use ilateral\SilverStripe\Testimonials\Model\Testimonial;
-use ilateral\SilverStripe\Testimonials\Model\TestimonialsHolderPage;
 
 if (!class_exists(Widget::class)) {
     return;

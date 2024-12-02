@@ -3,7 +3,7 @@
 namespace ilateral\SilverStripe\Testimonials\CMS;
 
 use SilverStripe\Admin\ModelAdmin;
-use ilateral\SilverStripe\Testimonials\Model\Testimonial;
+use DFT\SilverStripe\Testimonials\Model\Testimonial;
 
 class TestimonialsAdmin extends ModelAdmin 
 {

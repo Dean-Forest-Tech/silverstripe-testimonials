@@ -1,13 +1,12 @@
 <?php
 
-namespace ilateral\SilverStripe\Testimonials\Model;
+namespace DFT\SilverStripe\Testimonials\Model;
 
 use SilverStripe\Assets\Image;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Security\Member;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Security\Permission;
-use ilateral\SilverStripe\Testimonials\Model\TestimonialsHolderPage;
 
 class Testimonial extends DataObject 
 {

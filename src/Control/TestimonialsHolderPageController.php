@@ -1,6 +1,6 @@
 <?php
 
-namespace ilateral\SilverStripe\Testimonials\Control;
+namespace DFT\SilverStripe\Testimonials\Control;
 
 use PageController;
 use SilverStripe\ORM\PaginatedList;
