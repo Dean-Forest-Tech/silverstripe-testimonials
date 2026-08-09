@@ -30,3 +30,7 @@ This document logs changes by release for the SilverStripe gallery module.
 ## 4.0.9
 
 * Fix composer issues
+
+## 4.1.0
+
+* Move to manually assigning Testimonials to a holder page (rather than showing all)
