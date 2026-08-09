@@ -6,7 +6,7 @@ use ilateral\SilverStripe\Testimonials\Control\TestimonialsHolderPageController;
 use Page;
 use SilverStripe\Forms\GridField\GridField;
 use ilateral\SilverStripe\Testimonials\Model\Testimonial;
-use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
+use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use SilverStripe\ORM\DataList;
 
 class TestimonialsHolderPage extends Page 
@@ -17,30 +17,34 @@ class TestimonialsHolderPage extends Page
 
     private static $icon_class = 'font-icon-comment';
 
-    public function getCMSFields()
+    private static $many_many = [
+        "Testimonials" => Testimonial::class
+    ];
+
+    public function getCMSFields() 
     {
-        $fields = parent::getCMSFields();
+        $this->beforeUpdateCMSFields(function ($fields) {
+            $fields->addFieldToTab(
+                "Root.Testimonials",
+                GridField::create(
+                    "Testimonials",
+                    $this->fieldLabel('Testimonials'),
+                    $this->Testimonials(),
+                    GridFieldConfig_RelationEditor::create()
+                )
+            );
+        });
 
-        $fields->addFieldToTab(
-            "Root.Testimonials",
-            GridField::create(
-                "Testimonials",
-                "Testimonials",
-                Testimonial::get(),
-                GridFieldConfig_RecordEditor::create()
-            )
-        );
-
-        return $fields;
+        return parent::getCMSFields();
     }
 
-    public function getTestimonials(): DataList
+    public function getTestimonials()
     {
-        return Testimonial::get();
+        return $this->Testimonials();
     }
 
     public function getRandomTestimonials(): DataList
     {
-        return Testimonial::get()->shuffle();
+        return $this->Testimonials()->shuffle();
     }
 }
